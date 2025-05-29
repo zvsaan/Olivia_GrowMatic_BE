@@ -9,6 +9,9 @@ use App\Http\Controllers\RelayControlController;
 Route::get('/relay-setting', [RelaySettingController::class, 'show']);
 Route::put('/relay-setting', [RelaySettingController::class, 'update']);
 
+Route::get('/sensor-data/table/all', [SensorDataController::class, 'allTableData']);
+Route::get('/sensor-data/chart', [SensorDataController::class, 'chartData']);
+Route::get('/sensor-data/table', [SensorDataController::class, 'tableData']);
 Route::get('/sensor-data', [SensorDataController::class, 'index']);
 Route::post('/sensor-data', [SensorDataController::class, 'store']);
 Route::get('/sensor-data/latest', [SensorDataController::class, 'latest']); // opsional
